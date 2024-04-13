@@ -1,12 +1,13 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request  # Added 'request' import
 import requests
 import re
 
 app = Flask(__name__)
+
 @app.route("/")
-def home () : 
-return "Api is up..."
-return "/(AniListId)-episode-(Episode Number)"
+def home():
+    return "API is up..."
+
 @app.route('/<anime_name>')
 def get_anime_details(anime_name):
     try:
