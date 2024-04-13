@@ -4,7 +4,7 @@ import re
 
 app = Flask(__name__)
 @app.route("/")
-def home ()
+def home () : 
 return "Api is up..."
 return "/(AniListId)-episode-(Episode Number)"
 @app.route('/<anime_name>')
